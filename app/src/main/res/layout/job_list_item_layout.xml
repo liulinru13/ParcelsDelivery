@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/job_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间："
+        android:textColor="#ff6e6d6d"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="5dp"
+        android:textSize="12dp"/>
+
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_below="@id/job_item_date"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#ff828181"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="5dp"/>
+
+    <ImageView
+        android:id="@+id/location"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:src="@drawable/location"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+    <RelativeLayout
+        android:id="@+id/job_list_rela_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_below="@id/line1"
+        android:layout_toRightOf="@id/location"
+        android:layout_marginTop="5dp">
+
+
+
+        <TextView
+            android:id="@+id/job_list_source_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出发地:"
+            android:textSize="14dp"
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/job_list_desti_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/job_list_source_tv"
+            android:text="目的地:"
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/job_list_detail_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="运送详情"
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:layout_margin="5dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_below="@id/job_list_rela_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ff828181"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/job_item_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="状态："
+        android:textColor="#ff6e6d6d"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/line2"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="12dp"/>
+
+</RelativeLayout>

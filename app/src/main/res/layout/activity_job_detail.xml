@@ -1,0 +1,170 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffd7d6d6"
+    tools:context="mmrx.com.parcelsdelivery.activity.JobDetailActivity">
+
+    <include
+        layout="@layout/title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        android:id="@+id/job_detail_title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/job_detail_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bkg_top"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/job_detail_title_bar">
+
+        <TextView
+            android:id="@+id/job_detail_source"
+            android:layout_width="wrap_content"
+            android:text="出发地:"
+            style="@style/jobDetailItem"/>
+
+        <TextView
+            android:id="@+id/job_detail_source_tv"
+            android:layout_width="wrap_content"
+            android:text="哈尔滨工业大学威海"
+            style="@style/jobDetailItemContent"
+            android:layout_toRightOf="@+id/job_detail_source"
+            android:layout_toEndOf="@id/job_detail_source"
+            android:layout_alignBottom="@id/job_detail_source"/>
+
+        <TextView
+            android:id="@+id/job_detail_desti"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/job_detail_source"
+            android:text="目的地:"
+            style="@style/jobDetailItem"/>
+
+        <TextView
+            android:id="@+id/job_detail_desti_tv"
+            android:layout_width="wrap_content"
+            android:text="山东大学威海校区"
+            style="@style/jobDetailItemContent"
+            android:layout_toRightOf="@+id/job_detail_desti"
+            android:layout_toEndOf="@id/job_detail_desti"
+            android:layout_alignBottom="@id/job_detail_desti"/>
+
+        <TextView
+            android:id="@+id/job_detail_date"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/job_detail_desti"
+            android:text="预计送达时间:"
+            style="@style/jobDetailItem"/>
+
+        <TextView
+            android:id="@+id/job_detail_date_tv"
+            android:layout_width="wrap_content"
+            android:text="80天后"
+            style="@style/jobDetailItemContent"
+            android:layout_toRightOf="@+id/job_detail_date"
+            android:layout_toEndOf="@id/job_detail_date"
+            android:layout_alignBottom="@id/job_detail_date"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/job_detail_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bkg_bottom"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="25dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@id/job_detail_layout1">
+
+        <TextView
+            android:id="@+id/job_detail_p_size"
+            android:layout_width="wrap_content"
+            android:text="包裹尺寸:"
+            style="@style/jobDetailItem"/>
+
+        <TextView
+            android:id="@+id/job_detail_p_size_tv"
+            android:layout_width="wrap_content"
+            android:text="很大很大"
+            style="@style/jobDetailItemContent"
+            android:layout_toRightOf="@+id/job_detail_p_size"
+            android:layout_toEndOf="@id/job_detail_p_size"
+            android:layout_alignBottom="@id/job_detail_p_size"/>
+
+        <TextView
+            android:id="@+id/job_detail_p_weight"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/job_detail_p_size"
+            android:text="包裹重量:"
+            style="@style/jobDetailItem"/>
+
+        <TextView
+            android:id="@+id/job_detail_p_weight_tv"
+            android:layout_width="wrap_content"
+            android:text="很重很重"
+            style="@style/jobDetailItemContent"
+            android:layout_toRightOf="@+id/job_detail_p_weight"
+            android:layout_toEndOf="@id/job_detail_p_weight"
+            android:layout_alignBottom="@id/job_detail_p_weight"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pay_girl"
+        android:layout_below="@+id/job_detail_layout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:id="@+id/imageView"/>
+
+    <TextView
+        android:id="@+id/job_detail_pay_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bkg_left"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_marginLeft="100dp"
+        android:text="预付金额为100元哦"
+        android:textColor="#ff313131"
+        android:maxLines="1"
+        android:minLines="1"/>
+
+    <Button
+        android:id="@+id/job_detail_bn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:background="@drawable/red_bn"
+        android:layout_below="@id/imageView"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="我要抢"
+        android:textSize="16dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/job_detail_comp_bn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:background="@drawable/red_bn"
+        android:layout_below="@id/imageView"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="已送达"
+        android:textSize="16dp"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
